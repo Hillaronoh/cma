@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
-    protected $table = 'tblgroups';
+    protected $table = 'tbl_groups';
     protected $guarded = [];
 }

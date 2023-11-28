@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GroupController;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +29,6 @@ Route::post('new-user', function () {
     $token = $user->createToken('Personal Access Token');
     return ['token' => $token->plainTextToken];
 });
+
+Route::resource('contacts', ContactController::class);
+Route::resource('groups', GroupController::class);
